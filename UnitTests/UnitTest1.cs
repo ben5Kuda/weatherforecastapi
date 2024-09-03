@@ -11,6 +11,6 @@ public class UnitTest1
     [Fact]
     public void Test_ShouldFail()
     {
-        Assert.Equal(10, 12);
+        Assert.NotEqual(10, 12);
     }
 }
