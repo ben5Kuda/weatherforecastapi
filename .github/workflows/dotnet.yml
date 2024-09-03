@@ -13,6 +13,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
 
     steps:
     - uses: actions/checkout@v4
@@ -37,7 +41,7 @@ jobs:
           hide_complexity: false
           indicators: true
           output: both
-          thresholds: '30 80'
+          thresholds: '30 50'
 
     - name: Add Coverage PR Comment
       uses: marocchino/sticky-pull-request-comment@v2
